@@ -20,11 +20,11 @@ const PuertoAPP = "http://localhost:4200";
 const config = require('./config.js');
 
 const connection = mysql.createConnection({
-  host: config.DB_HOST,
-  user: config.DB_USER,
-  password:config.DB_PASSWORD,
-  database:config.DB_NAME,
-  port:config.DB_PORT
+  host: "containers-us-west-113.railway.app",
+  user: "root",
+  password:"XY1HRWvPq4HiK6qKjPUS",
+  database:"railway",
+  port:6112
 });
 
 connection.connect((err) => {
