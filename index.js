@@ -586,6 +586,6 @@ app.get("/cantidad", async (req, res) => {
   res.json(socialData);
 });
 
-app.listen(3000, () => {
-  console.log("app corriendo en puerto 3000");
+app.listen(config.PORT, () => {
+  console.log("app corriendo en puerto "+ config.PORT);
 });
