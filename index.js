@@ -380,9 +380,9 @@ app.get("/productos", async (req, res) => {
     };
     var pathImage = path.resolve(__dirname, `./imagenes/${RedSocial.imagen}`);
     if (fs.existsSync(pathImage)) {
-      RedSocial.imagen = "http://localhost:3000/imagenes/" + RedSocial.imagen;
+      RedSocial.imagen = `http://localhost:${config.PORT}/imagenes/` + RedSocial.imagen;  
     } else {
-      RedSocial.imagen = "http://localhost:3000/imagenes/mistake.jpg";
+      RedSocial.imagen = `http://localhost:${config.PORT}/imagenes/mistake.jpg`; 
     }
     data.push(RedSocial);
 
@@ -409,9 +409,9 @@ app.get("/productos", async (req, res) => {
 
             if (fs.existsSync(pathImage)) {
               producto.imagen =
-                "http://localhost:3000/imagenes/" + producto.imagen;
+              `http://localhost:${config.PORT}/imagenes/` + producto.imagen; 
             } else {
-              producto.imagen = "http://localhost:3000/imagenes/mistake.jpg";
+              producto.imagen = `http://localhost:${config.PORT}/imagenes/mistake.jpg`;  
             }
             data[g].productos.push(producto);
           }
